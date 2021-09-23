@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
+// My imports
+import 'pages/contador_page.dart';
+
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
-  Widget build(context) {
+  Widget build(BuildContext context) {
     return MaterialApp(
-        home: Center(
-      child: Text('Hola Mundo'),
-    ));
+      debugShowCheckedModeBanner: false, // * Ocultar debug banner
+      theme: ThemeData(),
+      home: const ContadorPage(), // home: HomePage(),
+    );
   }
 }
