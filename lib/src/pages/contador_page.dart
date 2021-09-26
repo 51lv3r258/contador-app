@@ -22,18 +22,22 @@ class _ContadorPageState extends State<ContadorPage> {
           // foregroundColor: const Color.fromRGBO(3, 237, 249, 1),
         ),
         body: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Contador: Número de clicks',
-              style: _textStyle,
-            ),
-            Text(
-              '$_counter',
-              style: _textStyle,
-            )
-          ],
+            child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'Contador: Número de clicks',
+                  style: _textStyle,
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  '$_counter',
+                  style: _textStyle,
+                  textAlign: TextAlign.center,
+                )
+              ]),
         )),
         /* floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat, */
         floatingActionButton: _createButtons());
@@ -44,7 +48,7 @@ class _ContadorPageState extends State<ContadorPage> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
         const SizedBox(
-          width: 30,
+          width: 32,
         ),
         FloatingActionButton(
           child: const Icon(Icons.exposure_zero_outlined),
@@ -68,13 +72,7 @@ class _ContadorPageState extends State<ContadorPage> {
     );
   }
 
-  void _increaseCounter() => setState(() =>
-        _counter++
-      );
-  void _decreaseCounter() => setState(() =>
-        _counter--
-      );
-  void _resetCounter() => setState(() =>
-        _counter = 0
-      );
+  void _increaseCounter() => setState(() => _counter++);
+  void _decreaseCounter() => setState(() => _counter--);
+  void _resetCounter() => setState(() => _counter = 0);
 }
